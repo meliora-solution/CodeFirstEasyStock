@@ -11,6 +11,5 @@
 
         public ICollection<Transaction> Transactions { get; set; }
         public ICollection<SupplierProduct> SupplierProducts { get; set; }
-
     }
 }

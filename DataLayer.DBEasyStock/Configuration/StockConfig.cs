@@ -1,11 +1,6 @@
 ﻿using DataLayer.DBEasyStock.Entity;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataLayer.DBEasyStock.Configuration
 {
@@ -13,7 +8,7 @@ namespace DataLayer.DBEasyStock.Configuration
     {
         public void Configure(EntityTypeBuilder<Stock> modelBuilder)
         {
-            modelBuilder.HasKey(b => new { b.ProductId, b.LocationId});
+            modelBuilder.HasKey(b => new { b.ProductId, b.LocationId });
             modelBuilder.Property(b => b.Qty).IsRequired(true).HasColumnType("Decimal(18,2)");
 
             //one to many relation between product and Stock. Satu produk bisa di banyak stock (stok adalah penghubung antara produk dan lokasi) 

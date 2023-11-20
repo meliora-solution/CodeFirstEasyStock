@@ -4,9 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataLayer.DBEasyStock.Configuration
 {
-
-
-    public class SupplierProductConfig : IEntityTypeConfiguration<SupplierProduct>
+   public class SupplierProductConfig : IEntityTypeConfiguration<SupplierProduct>
     {
         public void Configure(EntityTypeBuilder<SupplierProduct> modelBuilder)
         {
